@@ -1,6 +1,8 @@
 package com.example.btvn_homestay.model;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 import java.util.List;
@@ -15,6 +17,9 @@ public class Homestay {
     private Double price;
     private String description;
     private int max_number_stay;
+    private String image;
+    @Transient
+    private MultipartFile file;
     @ManyToOne
     private Status status;
     @ManyToOne
@@ -27,12 +32,14 @@ public class Homestay {
     )
     private List<Service> service;
 
-    public Homestay(Long id_homestay, String name, Double price, String description, int max_number_stay, Status status, Address address, List<Service> service) {
+    public Homestay(Long id_homestay, String name, Double price, String description, int max_number_stay, String image, MultipartFile file, Status status, Address address, List<Service> service) {
         this.id_homestay = id_homestay;
         this.name = name;
         this.price = price;
         this.description = description;
         this.max_number_stay = max_number_stay;
+        this.image = image;
+        this.file = file;
         this.status = status;
         this.address = address;
         this.service = service;
@@ -103,5 +110,21 @@ public class Homestay {
 
     public void setService(List<Service> service) {
         this.service = service;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public MultipartFile getFile() {
+        return file;
+    }
+
+    public void setFile(MultipartFile file) {
+        this.file = file;
     }
 }
