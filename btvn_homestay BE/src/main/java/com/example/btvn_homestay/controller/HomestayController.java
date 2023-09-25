@@ -33,12 +33,12 @@ public class HomestayController {
         homestayService.update(homestay);
         return "Da sua";
     }
-    @GetMapping("/{id}")
-    public Homestay getId(@PathVariable long id) {
-        return homestayService.findById(id);
-    }
+//    @GetMapping("/{id}")
+//    public Homestay getId(@PathVariable Long id) {
+//        return homestayService.findById(id);
+//    }
     @GetMapping("/delete/{id}")
-    public ResponseEntity<?> delete(@PathVariable long id){
+    public ResponseEntity<?> delete(@PathVariable Long id){
         homestayService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }

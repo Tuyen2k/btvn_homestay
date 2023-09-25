@@ -7,5 +7,5 @@ public interface IGenerateService<E> {
     List<E> findAll();
     Optional<E> findById(Long id);
     void save(E e);
-    void delete (Long id);
+
 }

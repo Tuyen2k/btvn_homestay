@@ -18,16 +18,13 @@ public class HomestayService implements IHomestayService {
     public List<Homestay> findAll() {
         return(List<Homestay>) iHomestayRepository.findAll();
     }
-    @Override
-    public Homestay findById(long id) {
-        Optional<Homestay> optionalHomestay = iHomestayRepository.findById(id);
-        if (optionalHomestay.isPresent()) {
-            return optionalHomestay.get();
-        } else {
-            return new Homestay();
-        }
-    }
 
+
+    @Override
+    public Optional<Homestay> findById(Long id) {
+      return   iHomestayRepository.findById(id);
+
+    }
     @Override
     public void save(Homestay homestay) {
         iHomestayRepository.save(homestay);
@@ -39,7 +36,7 @@ public class HomestayService implements IHomestayService {
     }
 
     @Override
-    public void delete(long id) {
+    public void delete(Long id) {
         iHomestayRepository.deleteById(id);
     }
 }

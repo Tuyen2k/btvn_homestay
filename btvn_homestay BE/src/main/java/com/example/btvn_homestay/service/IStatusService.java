@@ -5,7 +5,7 @@ import com.example.btvn_homestay.model.Status;
 import java.util.List;
 
 public interface IStatusService extends IGenerateService<Status> {
-
+    void delete (Long id);
 
 
 
