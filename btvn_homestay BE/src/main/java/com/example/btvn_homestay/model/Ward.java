@@ -36,4 +36,12 @@ public class Ward {
     public void setName(String name) {
         this.name = name;
     }
+
+    public District getDistrict() {
+        return district;
+    }
+
+    public void setDistrict(District district) {
+        this.district = district;
+    }
 }
