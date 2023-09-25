@@ -11,10 +11,14 @@ public class Service {
     @Column(unique = true)
     private String name;
 
-    public Service(Long id_service, String name ) {
+
+    @ManyToMany(mappedBy = "homestays")
+    private List<Homestay> homestay;
+
+    public Service(Long id_service, String name, List<Homestay> homestay) {
         this.id_service = id_service;
         this.name = name;
-
+        this.homestay = homestay;
     }
 
     public Service() {
@@ -36,4 +40,11 @@ public class Service {
         this.name = name;
     }
 
+    public List<Homestay> getHomestay() {
+        return homestay;
+    }
+
+    public void setHomestay(List<Homestay> homestay) {
+        this.homestay = homestay;
+    }
 }
