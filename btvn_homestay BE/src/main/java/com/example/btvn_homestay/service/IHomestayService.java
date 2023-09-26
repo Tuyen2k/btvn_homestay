@@ -1,7 +1,6 @@
 package com.example.btvn_homestay.service;
 
 import com.example.btvn_homestay.model.Homestay;
-import org.springframework.data.domain.Page;
 
 import java.util.List;
 

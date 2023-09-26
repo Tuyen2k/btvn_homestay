@@ -9,6 +9,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import com.example.btvn_homestay.service.IAddressService;
+import com.example.btvn_homestay.service.ICityService;
+import com.example.btvn_homestay.service.IDistrictService;
+import com.example.btvn_homestay.service.IWardService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin("*")
@@ -29,4 +37,14 @@ public class AddressController {
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+    private IAddressService addressService;
+    @Autowired
+    private ICityService cityService;
+    @Autowired
+    private IDistrictService districtService;
+    @Autowired
+    private IWardService wardService;
+
+
+
 }

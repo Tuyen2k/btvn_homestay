@@ -3,7 +3,7 @@ package com.example.btvn_homestay.controller;
 import com.example.btvn_homestay.model.Homestay;
 import com.example.btvn_homestay.service.AddressService;
 import com.example.btvn_homestay.service.StatusService;
-import com.example.btvn_homestay.service.impl.HomestayService;
+import com.example.btvn_homestay.service.iplm.HomestayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -55,13 +55,13 @@ public  ResponseEntity<Void>save(@RequestPart("homestay") Homestay homestay,
 
     @PostMapping("/update")
     public String update(@RequestBody Homestay homestay) {
-        homestayService.update(homestay);
+        homestayService.save(homestay);
         return "Da sua";
     }
 
     //    @GetMapping("/{id}")
 //    public Homestay getId(@PathVariable Long id) {
-//        return homestayService.findById(id);
+//        return homestayService.findById(id).get();
 //    }
     @GetMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
