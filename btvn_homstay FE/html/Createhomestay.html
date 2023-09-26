@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>List Smartphone</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Homestay.js"></script>
+
+</head>
+<body onload="getDataDB()">
+<form id="add-homestay" enctype="multipart/form-data">
+    <h1>Form create</h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="name">
+
+    <label for="price">Price:</label>
+    <input type="text" id="price" placeholder="price">
+
+    <label for="description">Description:</label>
+    <input type="text" id="description" placeholder="description">
+
+    <label for="max-number-stay">max-number-stay:</label>
+    <input type="text" id="max-number-stay" placeholder="max-number-stay">
+
+    <label for="file">IMG</label>
+    <input type="file" id="file" placeholder="IMG">
+
+    <label for="status">Status:</label>
+    <select id="status"></select>
+
+
+    <label for="address">Address:</label>
+    <select id="address"></select>
+
+    <label for="myCheckbox">
+        <input type="checkbox" id="myCheckbox" name="myCheckbox" value="option1">
+        Option 1
+    </label>
+    <input type="submit" value="Add" onclick="createHomestay()">
+</form>
+</body>
+</html>

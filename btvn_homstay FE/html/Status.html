@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>List Smartphone</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Status.js"></script>
+
+</head>
+<body>
+<form id="add-Status" style="display: none">
+    <h1>Form create</h1>
+    <table>
+        <tr>
+            <td><label for="name">Producer:</label></td>
+            <td><input type="text" id="name" placeholder="name"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Add" onclick="addCreate()"></td>
+        </tr>
+    </table>
+</form>
+<form id="update-Status" style="display: none">
+    <h1>Form Update</h1>
+    <table>
+        <tr>
+            <td><label for="name1">Producer:</label></td>
+            <td><input type="text" id="name1" placeholder="name1"></td>
+        </tr>
+        <tr>
+            <td> <button id="id_status" type="submit" value="" onclick="update(this.value)">
+                Update
+            </button></td>
+        </tr>
+    </table>
+</form>
+<h1 id="title">List Status</h1>
+<div id="div-btn">
+    <button onclick="displayStatus()" id="display">Display list Status</button>
+    <button onclick="displayFormCreate()" id="display-create">Create new status</button>
+
+</div>
+<div id="statusList"></div>
+</body>
+</html>
