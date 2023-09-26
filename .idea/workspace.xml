@@ -5,27 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1eb0280c-7d24-4325-ade0-99eedf79bc75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/controller/AddressController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/controller/CityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/controller/DistrictController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/controller/WardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/repository/ICityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/repository/IDistrictRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/repository/IWardRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/service/IAddressService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/service/ICityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/service/IDistrictService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/service/IWardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/service/iplm/AddressService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/service/iplm/CityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/service/iplm/DistrictService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/service/iplm/WardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homstay FE/html/address.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f5544225-539b-4c12-b316-e7ac454adea6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f5544225-539b-4c12-b316-e7ac454adea6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/model/Ward.java" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/model/Ward.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/repository/IAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/repository/IAddressRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/repository/IHomestayRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/repository/IHomestayRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/service/IGenerateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/service/IGenerateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/btvn_homstay FE/js/address.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/.idea/btvn_homstay FE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/.idea/btvn_homstay FE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/html/address.html" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/html/address.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +69,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "address__be",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/tuyen/Desktop/product_bt_bai_3_jpa_phan_trang_up_multi_file",
+    "last_opened_file_path": "C:/Users/tuyen/Desktop/ajax",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -205,6 +188,7 @@
       <updated>1695612796472</updated>
       <workItem from="1695612797558" duration="11850000" />
       <workItem from="1695629522152" duration="3593000" />
+      <workItem from="1695633140051" duration="2197000" />
     </task>
     <servers />
   </component>
