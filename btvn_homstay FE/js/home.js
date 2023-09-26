@@ -34,6 +34,7 @@ function show(arr) {
               <td>${h.address.district.name}</td>
               <td>${h.address.ward.name}</td>
               <td>${h.address.address_detail}</td>
+              <td id="service">`+displayService(h.service)+`</td>
               <td><button type="button" class="btn btn-warning" onclick="showEdit(${h.id_homestay})" data-toggle="modal" data-target="#modalEdit" >Edit</button></td>
               <td><button type="button" class="btn btn-danger"  onclick="deleteS(${h.id_homestay})">Delete</button></td>
              </tr>`
