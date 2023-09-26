@@ -9,7 +9,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.swing.text.html.Option;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin("*")
@@ -25,9 +27,9 @@ public class CityController {
 
     @GetMapping("/{id}")
     public ResponseEntity<City> findById(@PathVariable Long id){
-        City city = cityService.findById(id);
-        if (city != null){
-            return new ResponseEntity<>(city, HttpStatus.OK);
+        Optional<City> city = cityService.findById(id);
+        if (city.isPresent()){
+            return new ResponseEntity<>(city.get(), HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }

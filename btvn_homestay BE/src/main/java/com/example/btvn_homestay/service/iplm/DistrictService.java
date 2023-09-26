@@ -19,12 +19,8 @@ public class DistrictService implements IDistrictService {
     @Autowired
     private ICityService cityService;
     @Override
-    public District findById(Long id) {
-        Optional<District> district = districtRepository.findById(id);
-        if (district.isPresent()){
-            return district.get();
-        }
-        return null;
+    public Optional<District> findById(Long id) {
+        return districtRepository.findById(id);
     }
 
     @Override
@@ -39,7 +35,7 @@ public class DistrictService implements IDistrictService {
 
     @Override
     public List<District> findAllByCity(Long id) {
-        City city = cityService.findById(id);
+        City city = cityService.findById(id).get();
         return districtRepository.findAllByCity(city);
     }
 }

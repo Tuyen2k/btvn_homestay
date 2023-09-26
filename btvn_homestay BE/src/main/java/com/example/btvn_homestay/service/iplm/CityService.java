@@ -16,12 +16,8 @@ public class CityService implements ICityService {
     @Autowired
     private ICityRepository cityRepository;
     @Override
-    public City findById(Long id) {
-        Optional<City> city = cityRepository.findById(id);
-        if (city.isPresent()){
-            return city.get();
-        }
-        return null;
+    public Optional<City> findById(Long id) {
+        return cityRepository.findById(id);
     }
 
     @Override

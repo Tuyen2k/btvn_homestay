@@ -15,12 +15,8 @@ public class AddressService implements IAddressService {
     @Autowired
     private IAddressRepository addressRepository;
     @Override
-    public Address findById(Long id) {
-        Optional<Address> address = addressRepository.findById(id);
-        if (address.isPresent()){
-            return address.get();
-        }
-        return null;
+    public Optional<Address> findById(Long id) {
+       return addressRepository.findById(id);
     }
 
     @Override

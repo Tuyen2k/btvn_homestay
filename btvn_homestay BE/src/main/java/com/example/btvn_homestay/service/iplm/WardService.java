@@ -18,12 +18,8 @@ public class WardService implements IWardService {
     @Autowired
     private IDistrictService districtService;
     @Override
-    public Ward findById(Long id) {
-        Optional<Ward> ward = wardRepository.findById(id);
-        if (ward.isPresent()){
-            return ward.get();
-        }
-        return null;
+    public Optional<Ward> findById(Long id) {
+        return wardRepository.findById(id);
     }
 
     @Override
@@ -38,7 +34,7 @@ public class WardService implements IWardService {
 
     @Override
     public List<Ward> findAllByDistrict(Long id_district) {
-        District district = districtService.findById(id_district);
+        District district = districtService.findById(id_district).get();
         return wardRepository.findAllByDistrict(district);
     }
 }

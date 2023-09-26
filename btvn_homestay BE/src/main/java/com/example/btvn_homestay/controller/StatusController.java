@@ -1,7 +1,7 @@
 package com.example.btvn_homestay.controller;
 
 import com.example.btvn_homestay.model.Status;
-import com.example.btvn_homestay.service.StatusService;
+import com.example.btvn_homestay.service.iplm.StatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

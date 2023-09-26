@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin("*")
@@ -21,9 +22,9 @@ public class DistrictController {
     }
     @GetMapping("/{id}")
     public ResponseEntity<District> findById(@PathVariable Long id){
-        District district = districtService.findById(id);
-        if (district != null){
-            return new ResponseEntity<>(district, HttpStatus.OK);
+        Optional<District> district = districtService.findById(id);
+        if (district.isPresent()){
+            return new ResponseEntity<>(district.get(), HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }

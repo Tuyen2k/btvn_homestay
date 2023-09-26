@@ -1,4 +1,4 @@
-package com.example.btvn_homestay.service.impl;
+package com.example.btvn_homestay.service.iplm;
 
 import com.example.btvn_homestay.model.Homestay;
 import com.example.btvn_homestay.repository.IHomestayRepository;
@@ -19,13 +19,8 @@ public class HomestayService implements IHomestayService {
         return(List<Homestay>) iHomestayRepository.findAll();
     }
     @Override
-    public Homestay findById(long id) {
-        Optional<Homestay> optionalHomestay = iHomestayRepository.findById(id);
-        if (optionalHomestay.isPresent()) {
-            return optionalHomestay.get();
-        } else {
-            return new Homestay();
-        }
+    public Optional<Homestay> findById(Long id) {
+        return iHomestayRepository.findById(id);
     }
 
     @Override
@@ -34,12 +29,7 @@ public class HomestayService implements IHomestayService {
     }
 
     @Override
-    public void update(Homestay homestay) {
-        iHomestayRepository.save(homestay);
-    }
-
-    @Override
-    public void delete(long id) {
+    public void delete(Long id) {
         iHomestayRepository.deleteById(id);
     }
 }

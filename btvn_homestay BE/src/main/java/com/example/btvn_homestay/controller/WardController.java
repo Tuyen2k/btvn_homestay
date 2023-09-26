@@ -7,7 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.swing.text.html.Option;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin("*")
@@ -21,9 +23,9 @@ public class WardController {
     }
     @GetMapping("/{id}")
     public ResponseEntity<Ward> findById(@PathVariable Long id){
-        Ward ward = wardService.findById(id);
-        if (ward != null){
-            return new ResponseEntity<>(ward, HttpStatus.OK);
+       Optional<Ward> ward = wardService.findById(id);
+        if (ward.isPresent()){
+            return new ResponseEntity<>(ward.get(), HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }

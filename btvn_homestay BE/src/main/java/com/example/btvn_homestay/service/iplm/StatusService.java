@@ -1,7 +1,8 @@
-package com.example.btvn_homestay.service;
+package com.example.btvn_homestay.service.iplm;
 
 import com.example.btvn_homestay.model.Status;
 import com.example.btvn_homestay.repository.IStatusRepository;
+import com.example.btvn_homestay.service.IStatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class StatusService  implements IStatusService{
+public class StatusService  implements IStatusService {
     @Autowired
     IStatusRepository statusRepository;
 
