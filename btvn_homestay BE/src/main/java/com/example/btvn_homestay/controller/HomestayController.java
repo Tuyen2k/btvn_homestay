@@ -18,8 +18,8 @@ public class HomestayController {
     HomestayService homestayService;
 
     @GetMapping
-    public List<Homestay> getAllHomestays() {
-        return homestayService.findAll();
+    public ResponseEntity<Iterable<Homestay>> getAllHomestays() {
+        return new ResponseEntity<>(homestayService.findAll(), HttpStatus.OK);
     }
 
     @PostMapping
@@ -28,18 +28,19 @@ public class HomestayController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @PostMapping("/update")
-    public String update(@RequestBody Homestay homestay){
+    @PostMapping("/update/{id}")
+    public ResponseEntity<?> update(@RequestBody Homestay homestay,@PathVariable Long id) {
+        homestay.setId_homestay(id);
         homestayService.save(homestay);
-        return "Da sua";
-    }
-    @GetMapping("/{id}")
-    public Homestay getId(@PathVariable Long id) {
-        return homestayService.findById(id).get();
+        return new ResponseEntity<>(HttpStatus.OK);
     }
     @GetMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id){
         homestayService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+    @GetMapping("/search")
+    public ResponseEntity<Iterable<Homestay>> search(String name){
+        return new ResponseEntity<>(homestayService.findAllByName(name), HttpStatus.OK);
     }
 }

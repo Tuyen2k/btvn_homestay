@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface IHomestayService extends IGenerateService<Homestay> {
     void delete(Long id);
-
+    List<Homestay> findAllByName(String name);
 }
 
