@@ -1,7 +1,7 @@
 package com.example.btvn_homestay.controller;
 
 import com.example.btvn_homestay.model.Address;
-import com.example.btvn_homestay.service.AddressService;
+import com.example.btvn_homestay.service.iplm.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +13,6 @@ import com.example.btvn_homestay.service.IAddressService;
 import com.example.btvn_homestay.service.ICityService;
 import com.example.btvn_homestay.service.IDistrictService;
 import com.example.btvn_homestay.service.IWardService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/address")
 public class AddressController {
     @Autowired
-  private   AddressService addressService ;
+  private AddressService addressService ;
     @GetMapping
     public ResponseEntity<List<Address>> findAll(){
         List<Address> addresses =addressService.findAll();
@@ -37,13 +36,6 @@ public class AddressController {
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
-    private IAddressService addressService;
-    @Autowired
-    private ICityService cityService;
-    @Autowired
-    private IDistrictService districtService;
-    @Autowired
-    private IWardService wardService;
 
 
 
