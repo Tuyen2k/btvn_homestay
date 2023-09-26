@@ -18,7 +18,7 @@ public class HomestayController {
     HomestayService homestayService;
 
     @GetMapping
-    public List<Homestay> getAllHomestays() {
+    public List<Homestay> getAllHomestays(){
         return homestayService.findAll();
     }
 
