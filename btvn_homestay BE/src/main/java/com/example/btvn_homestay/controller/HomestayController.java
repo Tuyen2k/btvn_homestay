@@ -1,9 +1,9 @@
 package com.example.btvn_homestay.controller;
 
 import com.example.btvn_homestay.model.Homestay;
-import com.example.btvn_homestay.service.AddressService;
-import com.example.btvn_homestay.service.StatusService;
-import com.example.btvn_homestay.service.impl.HomestayService;
+import com.example.btvn_homestay.service.iplm.AddressService;
+import com.example.btvn_homestay.service.iplm.HomestayService;
+import com.example.btvn_homestay.service.iplm.StatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
 
 import java.io.File;
 import java.util.List;
@@ -23,11 +22,12 @@ public class HomestayController {
     @Autowired
     HomestayService homestayService;
     @Autowired
-    StatusService statusService;
+    private StatusService statusService;
     @Autowired
-    AddressService addressService;
+    private AddressService addressService;
     @Value("${image}")
     private String image;
+
 
 
     @GetMapping
@@ -55,18 +55,15 @@ public  ResponseEntity<Void>save(@RequestPart("homestay") Homestay homestay,
 
     @PostMapping("/update")
     public String update(@RequestBody Homestay homestay) {
-        homestayService.update(homestay);
+        homestayService.save(homestay);
         return "Da sua";
     }
 
-    //    @GetMapping("/{id}")
-//    public Homestay getId(@PathVariable Long id) {
-//        return homestayService.findById(id);
-//    }
     @GetMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
         homestayService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
 
 }

@@ -1,4 +1,4 @@
-package com.example.btvn_homestay.service.impl;
+package com.example.btvn_homestay.service.iplm;
 
 import com.example.btvn_homestay.model.Homestay;
 import com.example.btvn_homestay.repository.IHomestayRepository;
