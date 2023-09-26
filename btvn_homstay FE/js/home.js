@@ -20,9 +20,10 @@ getAll();
 
 function show(arr) {
     let str = "";
+    let count = 0;
     for (const h of arr) {
         str += ` <tr>
-              <td>${h.id_homestay}</td>
+              <td>${++count}</td>
               <td>${h.name}</td>
               <td>${h.price}</td>
               <td>${h.description}</td>
