@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 </head>
-<body>
+<body onload="getAll()">
 <div class="container-fluid">
     <h2>Danh Sách Homestay</h2>
     <div class="row">
@@ -21,7 +21,7 @@
             </button>
         </div>
         <div class="col-2">
-            <input id="search" oninput="search()" placeholder="Search...">
+            <input id="search" onkeyup="searchByNam()" placeholder="Search...">
         </div>
     </div>
     <table class="table table-striped table-hover table-bordered">
