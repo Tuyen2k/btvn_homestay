@@ -57,3 +57,21 @@ function search() {
         }
     });
 }
+
+function searchPrice(){
+    var minPrice = $("#minPrice").val();
+    var maxPrice = $("#maxPrice").val();
+    $.ajax({
+        type: "GET",
+        headers: {
+            'Accept': 'application/json',
+        },
+        url: "http://localhost:8080/api/homestay/price?minPrice=" + minPrice + "&maxPrice=" + maxPrice,
+        success: function (data) {
+            show(data)
+        },
+        error: function (err) {
+            console.log(err)
+        }
+    });
+}
