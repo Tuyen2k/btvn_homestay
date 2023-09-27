@@ -53,8 +53,8 @@ function showEdit(id) {
         success: function (data) {
             localStorage.setItem("id_update", data.id_homestay);
             localStorage.setItem("image", data.image);
-            let address = JSON.stringify(data.address)
-            localStorage.setItem("address", address)
+            let homestay = JSON.stringify(data)
+            localStorage.setItem("homestay", homestay)
             window.location.href = "save.html";
         }
     })
@@ -87,6 +87,7 @@ function search() {
         url: "http://localhost:8080/api/homestay/search?name=" + search,
         success: function (data) {
             show(data);
+
         },
         error: function (err) {
             console.log(err)
@@ -133,6 +134,7 @@ function getAllPage() {
             arrDB = data.content
             showPage(data)
             page(data)
+            displayService(data.content);
         }
     })
 }
@@ -187,6 +189,7 @@ function previousP(numberPage){
             success : function (data){
                 showPage(data)
                 page(data)
+                displayService(data.content)
             }
         })
     }
@@ -202,6 +205,7 @@ function nextP(numberPage, totalPage){
             success : function (data){
                 showPage(data)
                 page(data)
+                displayService(data.content)
             }
         })
     }
@@ -217,6 +221,7 @@ function searchPrice(){
         url: "http://localhost:8080/api/homestay/price?minPrice=" + minPrice + "&maxPrice=" + maxPrice,
         success: function (data) {
             show(data)
+            displayService(data)
         },
         error: function (err) {
             console.log(err)
