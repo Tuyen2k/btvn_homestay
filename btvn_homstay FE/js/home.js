@@ -10,7 +10,6 @@ function getAll() {
         },
         error: function (err) {
             console.log(err)
-            // lỗi
         }
     });
 
