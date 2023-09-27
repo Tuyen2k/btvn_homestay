@@ -41,7 +41,6 @@ function findDistrict(){
     })
 }
 function findWard(){
-
     $(document).ready(function () {
         $('select').selectize({
             sortField: 'text'
@@ -61,5 +60,20 @@ function findWard(){
             document.getElementById("select_ward").innerHTML = content;
         }
     })
+}
+
+class Address{
+    id_address
+    city
+    district
+    ward
+    address_detail
+    constructor() {
+        this.id_address = -1
+        this.city = {}
+        this.district = {}
+        this.ward = {}
+        this.address_detail = ""
+    }
 }
 

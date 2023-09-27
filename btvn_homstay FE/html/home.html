@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -16,12 +16,12 @@
     <h2>Danh Sách Homestay</h2>
     <div class="row">
         <div class="col-10">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCreate">
+            <a onclick="createForm()" class="btn btn-primary">
                 Create
-            </button>
+            </a>
         </div>
         <div class="col-2">
-            <input id="search" onkeyup="searchByNam()" placeholder="Search...">
+            <input id="search" onkeyup="searchByName()" placeholder="Search...">
         </div>
     </div>
     <table class="table table-striped table-hover table-bordered">

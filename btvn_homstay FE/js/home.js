@@ -25,13 +25,15 @@ function show(arr) {
     let str = "";
     let count = 0;
     for (const h of arr) {
+        console.log(h)
+        //mở lại t cái tắt nhầm
         str += ` <tr>
               <td>${++count}</td>
               <td>${h.name}</td>
               <td>${h.price}</td>
               <td>${h.description}</td>
               <td>${h.max_number_stay}</td>
-              <td><img style="width: 100px; height: 100px" src="../btvn_homestay BE/src/main/webapp/image/${h.image}" alt="image"></td>   
+              <td><img style="width: 100px; height: 100px" src="../src/main/webapp/image/${h.image}" alt="image"></td>   
               <td>${h.status.name}</td>
               <td>${h.address.city.name}</td>
               <td>${h.address.district.name}</td>
@@ -43,6 +45,21 @@ function show(arr) {
              </tr>`
     }
     document.getElementById("show").innerHTML = str;
+
+}
+
+function showEdit(id){
+    $.ajax({
+        type: "GET",
+        url: `http://localhost:8080/api/homestay/${id}`,
+        success: function (data){
+            localStorage.setItem("id_update", data.id_homestay);
+            localStorage.setItem("image", data.image);
+            let address = JSON.stringify(data.address)
+            localStorage.setItem("address", address)
+            window.location.href = "save.html";
+        }
+    })
 }
 
 function displayService(arr) {
@@ -79,7 +96,7 @@ function search() {
     });
 }
 
-function searchByNam(){
+function searchByName(){
     let search = $("#search").val();
     let result = [];
     for (let i = 0; i < arrDB.length; i++) {
@@ -88,4 +105,11 @@ function searchByNam(){
         }
     }
     show(result);
+    displayService(result);
+}
+
+function createForm(){
+    address = {}
+    localStorage.setItem("address", JSON.stringify(address));
+    window.location.href = "save.html"
 }
