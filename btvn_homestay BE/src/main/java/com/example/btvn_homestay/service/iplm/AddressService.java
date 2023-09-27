@@ -28,4 +28,10 @@ public class AddressService implements IAddressService {
     public List<Address> findAll() {
         return addressRepository.findAll();
     }
+
+    @Override
+    public Address findLast() {
+        return addressRepository.findLast();
+    }
 }
+

@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1eb0280c-7d24-4325-ade0-99eedf79bc75" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/controller/HomestayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/controller/HomestayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/html/address.html" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/html/address.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/controller/ServiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/repository/IServiceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/service/IService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/service/iplm/ServiceIPLM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/btvn_homstay FE/html/save.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/btvn_homstay FE/js/save.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/html/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/js/address.js" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/js/address.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/js/home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +72,13 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;address__be&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tuyen/Desktop/ajax&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tuyen/Desktop/btvn_homestay&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -188,6 +199,9 @@
       <workItem from="1695629522152" duration="3593000" />
       <workItem from="1695633140051" duration="2197000" />
       <workItem from="1695702244297" duration="315000" />
+      <workItem from="1695734002717" duration="5052000" />
+      <workItem from="1695741203234" duration="493000" />
+      <workItem from="1695741715474" duration="950000" />
     </task>
     <servers />
   </component>
