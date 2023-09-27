@@ -14,7 +14,6 @@ function getAll() {
         },
         error: function (err) {
             console.log(err)
-            // lỗi
         }
     });
 
@@ -26,8 +25,6 @@ function show(arr) {
     let str = "";
     let count = 0;
     for (const h of arr) {
-        console.log(h)
-        //mở lại t cái tắt nhầm
         str += ` <tr>
               <td>${++count}</td>
               <td>${h.name}</td>
@@ -208,4 +205,21 @@ function nextP(numberPage, totalPage){
             }
         })
     }
+}
+function searchPrice(){
+    var minPrice = $("#minPrice").val();
+    var maxPrice = $("#maxPrice").val();
+    $.ajax({
+        type: "GET",
+        headers: {
+            'Accept': 'application/json',
+        },
+        url: "http://localhost:8080/api/homestay/price?minPrice=" + minPrice + "&maxPrice=" + maxPrice,
+        success: function (data) {
+            show(data)
+        },
+        error: function (err) {
+            console.log(err)
+        }
+    });
 }

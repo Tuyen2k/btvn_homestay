@@ -1,8 +1,11 @@
 package com.example.btvn_homestay.controller;
 
 import com.example.btvn_homestay.model.Homestay;
+import com.example.btvn_homestay.service.IStatusService;
+import com.example.btvn_homestay.service.iplm.AddressService;
 import com.example.btvn_homestay.service.IAddressService;
 import com.example.btvn_homestay.service.IHomestayService;
+import com.example.btvn_homestay.service.iplm.StatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
@@ -28,11 +31,17 @@ public class HomestayController {
     @Autowired
     IHomestayService homestayService;
     @Autowired
-    IAddressService addressService;
+    private IStatusService statusService;
+    @Autowired
+    private IAddressService addressService;
+    @Value("${image}")
+    private String image;
+
+
 
     @GetMapping
-    public List<Homestay> getAllHomestays() {
-        return homestayService.findAll();
+    public ResponseEntity<Iterable<Homestay>> getAllHomestays() {
+        return new ResponseEntity<>(homestayService.findAll(), HttpStatus.OK);
     }
 
     @PostMapping
@@ -59,10 +68,11 @@ public class HomestayController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @PostMapping("/update")
-    public String update(@RequestBody Homestay homestay) {
+    @PostMapping("/update/{id}")
+    public ResponseEntity<?> update(@RequestBody Homestay homestay,@PathVariable Long id) {
+        homestay.setId_homestay(id) ;
         homestayService.save(homestay);
-        return "Da sua";
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
@@ -85,4 +95,13 @@ public class HomestayController {
         return new ResponseEntity<>(homestayService.findAllPage(pageable),HttpStatus.OK);
     }
 
+    @GetMapping("/search")
+    public ResponseEntity<Iterable<Homestay>> search(String name){
+        return new ResponseEntity<>(homestayService.findAllByName(name), HttpStatus.OK);
+    }
+    @GetMapping("/price")
+    public ResponseEntity<Iterable<Homestay>> getHomestaysByPriceRange(@RequestParam("minPrice") Double minPrice,
+                                                   @RequestParam("maxPrice") Double maxPrice) {
+        return new ResponseEntity<>(homestayService.findAllByPriceBetween(minPrice, maxPrice), HttpStatus.OK);
+    }
 }

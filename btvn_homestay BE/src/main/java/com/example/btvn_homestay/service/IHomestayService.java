@@ -10,5 +10,7 @@ public interface IHomestayService extends IGenerateService<Homestay> {
     void delete(Long id);
     Page<Homestay> findAllPage(Pageable pageable);
 
+    List<Homestay> findAllByName(String name);
+    List<Homestay> findAllByPriceBetween(Double minPrice, Double maxPrice);
 }
 
