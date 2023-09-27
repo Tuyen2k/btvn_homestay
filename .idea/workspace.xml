@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1eb0280c-7d24-4325-ade0-99eedf79bc75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/btvn_homstay FE/js/address.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/.idea/btvn_homstay FE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/.idea/btvn_homstay FE.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/html/address.html" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/html/address.html" afterDir="false" />
-    </list>
+    <list default="true" id="1eb0280c-7d24-4325-ade0-99eedf79bc75" name="Changes" comment="Tim kiem?" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +41,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
@@ -55,6 +55,10 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2Vs7BFGS3SRSXeGEXKqs9afbz3v" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -65,9 +69,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "address__be",
+    "git-widget-placeholder": "dev",
     "jdk.selected.JAVA_MODULE": "1.8",
     "last_opened_file_path": "C:/Users/tuyen/Desktop/ajax",
     "node.js.detected.package.eslint": "true",
@@ -75,6 +80,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "spring.configuration.checksum": "39c5621244fbb3c0e5b81b3f49bbc7dc",
     "vue.rearranger.settings.migration": "true"
   },
@@ -90,7 +98,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.791" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.791" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.791" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.781" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Gradle : com.example : btvn_homestay-1.0-SNAPSHOT.war">
@@ -189,10 +197,45 @@
       <workItem from="1695612797558" duration="11850000" />
       <workItem from="1695629522152" duration="3593000" />
       <workItem from="1695633140051" duration="2197000" />
+      <workItem from="1695694003329" duration="8943000" />
+      <workItem from="1695718232830" duration="646000" />
+      <workItem from="1695781971208" duration="5202000" />
     </task>
+    <task id="LOCAL-00001" summary="Tim kiem?">
+      <option name="closed" value="true" />
+      <created>1695782068208</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695782068209</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Tim kiem?">
+      <option name="closed" value="true" />
+      <created>1695797715296</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695797715296</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Tim kiem?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tim kiem?" />
   </component>
 </project>
