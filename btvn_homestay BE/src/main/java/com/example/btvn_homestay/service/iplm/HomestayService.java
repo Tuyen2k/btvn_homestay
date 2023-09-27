@@ -4,6 +4,8 @@ import com.example.btvn_homestay.model.Homestay;
 import com.example.btvn_homestay.repository.IHomestayRepository;
 import com.example.btvn_homestay.service.IHomestayService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -31,5 +33,10 @@ public class HomestayService implements IHomestayService {
     @Override
     public void delete(Long id) {
         iHomestayRepository.deleteById(id);
+    }
+
+    @Override
+    public Page<Homestay> findAllPage(Pageable pageable) {
+        return iHomestayRepository.findAll(pageable);
     }
 }

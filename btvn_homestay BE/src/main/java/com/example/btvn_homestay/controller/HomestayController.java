@@ -5,6 +5,9 @@ import com.example.btvn_homestay.service.IAddressService;
 import com.example.btvn_homestay.service.IHomestayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.FileCopyUtils;
@@ -76,4 +79,10 @@ public class HomestayController {
         homestayService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @GetMapping("/findAll")
+    public ResponseEntity<Page<Homestay>> findAllPage(@PageableDefault(value = 8)Pageable pageable){
+        return new ResponseEntity<>(homestayService.findAllPage(pageable),HttpStatus.OK);
+    }
+
 }
