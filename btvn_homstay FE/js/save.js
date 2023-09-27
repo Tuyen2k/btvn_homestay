@@ -7,24 +7,24 @@ function findCityS(){
             let content = '<select id="city" onchange="findDistrictS()" placeholder="Choice a city..." style="width: 100%; height: 40px" class="form-select">';
             content += '<option>Choice a city...</option>';
             for (let i = 0; i < data.length; i++) {
-                if (data[i].id_city === address.city.id_city){
-                    content += '<option value="'+data[i].id_city+'" selected>'+data[i].name+'</option>';
-                    continue
-                }
+                // if (data[i].id_city === address.city.id_city){
+                //     content += '<option value="'+data[i].id_city+'" selected>'+data[i].name+'</option>';
+                //     continue
+                // }
                 content += '<option value="'+data[i].id_city+'">'+data[i].name+'</option>';
             }
             content += "</select>";
             document.getElementById("select_city").innerHTML = content;
         }
     })
-    findDistrictS()
-    findWardS()
+    // findDistrictS()
+    // findWardS()
 }
 function findDistrictS(){
     let id_city = document.getElementById("city").value;
-    if (id_city === "-1"){
-        id_city = address.city.id_city;
-    }
+    // if (id_city === "-1"){
+    //     id_city = address.city.id_city;
+    // }
     $.ajax({
         type: "GET",
         url: `http://localhost:8080/api/districts/${id_city}/city`,
@@ -32,10 +32,10 @@ function findDistrictS(){
             let content = '<select style="width: 100%; height: 40px" class="form-select" onchange="findWardS()" id="district">';
             content += '<option>Choice a district...</option>';
             for (let i = 0; i < data.length; i++) {
-                if (data[i].id_district === address.district.id_district){
-                    content += '<option value="'+data[i].id_district+'" selected>'+data[i].name+'</option>';
-                    continue
-                }
+                // if (data[i].id_district === address.district.id_district){
+                //     content += '<option value="'+data[i].id_district+'" selected>'+data[i].name+'</option>';
+                //     continue
+                // }
                 content += '<option value="'+data[i].id_district+'">'+data[i].name+'</option>';
             }
             content += "</select>";
@@ -45,9 +45,9 @@ function findDistrictS(){
 }
 function findWardS(){
     let id_district = document.getElementById("district").value;
-    if (id_district === "-1"){
-        id_district = address.district.id_district;
-    }
+    // if (id_district === "-1"){
+    //     id_district = address.district.id_district;
+    // }
     $.ajax({
         type: "GET",
         url: `http://localhost:8080/api/wards/${id_district}/district`,
@@ -55,10 +55,10 @@ function findWardS(){
             let content = '<select style="width: 100%; height: 40px" class="form-select" id="ward">';
             content += '<option>Choice a ward...</option>';
             for (let i = 0; i < data.length; i++) {
-                if (data[i].id_ward === address.ward.id_ward){
-                    content += '<option value="'+data[i].id_ward+'" selected>'+data[i].name+'</option>';
-                    continue
-                }
+                // if (data[i].id_ward === address.ward.id_ward){
+                //     content += '<option value="'+data[i].id_ward+'" selected>'+data[i].name+'</option>';
+                //     continue
+                // }
                 content += '<option value="'+data[i].id_ward+'">'+data[i].name+'</option>';
             }
             content += "</select>";
@@ -75,7 +75,7 @@ function findAllService(){
             let content = "";
             for (let i = 0; i < data.length; i++) {
                 content += ` <div class="form-check" id="service">
-                                <input class="form-check-input" type="checkbox" value="${data[i].id_service}" id="service${i}">
+                                <input class="form-check-input" name="service" type="checkbox" value="${data[i].id_service}" id="service${i}">
                                 <label class="form-check-label" for="service${i}">${data[i].name}</label> 
                              </div>`
             }
@@ -97,6 +97,13 @@ function save(){
     let ward = $("#ward").val();
     let address_detail = $("#address_detail").val();
     let id = +localStorage.getItem("id_update")
+    let checkbox = document.getElementsByName("service");
+    let service = [];
+    for (let i = 0; i < checkbox.length; i++) {
+        if (checkbox[i].checked){
+            service.push(checkbox[i].value)
+        }
+    }
     let homestay;
     if (file === undefined) {
         file = new File([], "", undefined)
@@ -121,12 +128,8 @@ function save(){
                     id_ward: ward
                 },
                 address_detail: address_detail,
-                service : [
-                    {
-                        id_service: 1
-                    }
-                ]
-            }
+            },
+            service : setService(service)
         }
     }else {
         if (address.city.id_city == city && address.district.id_district == district
@@ -142,11 +145,7 @@ function save(){
                 },
                 address : address,
                 image : localStorage.getItem("image"),
-                service : [
-                    {
-                        id_service: 1
-                    }
-                ]
+                service : setService(service)
             }
         }else {
             homestay = {
@@ -171,11 +170,7 @@ function save(){
                     address_detail: address_detail
                 },
                 image : localStorage.getItem("image"),
-                service : [
-                    {
-                        id_service: 1
-                    }
-                ]
+                service : setService(service)
             }
 
         }
@@ -200,6 +195,16 @@ function save(){
     event.preventDefault()
 }
 
+function setService(service){
+    let content=[]
+    let a;
+    for (let i = 0; i < service.length; i++) {
+            a = {id_service : service[i]}
+         content.push(a)
+    }
+    return content;
+}
+
 function displayHomestayUpdate(){
     let id = localStorage.getItem("id_update");
     $.ajax({
@@ -222,3 +227,5 @@ function getDB(){
     displayHomestayUpdate()
     findCityS()
 }
+
+
