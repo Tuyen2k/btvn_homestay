@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1eb0280c-7d24-4325-ade0-99eedf79bc75" name="Changes" comment="Tim kiem?" />
+    <list default="true" id="1eb0280c-7d24-4325-ade0-99eedf79bc75" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/btvn_homstay FE/js/address.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/.idea/btvn_homstay FE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/.idea/btvn_homstay FE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/html/address.html" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/html/address.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +77,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "address__be",
     "jdk.selected.JAVA_MODULE": "1.8",
     "last_opened_file_path": "C:/Users/tuyen/Desktop/ajax",
     "node.js.detected.package.eslint": "true",
@@ -80,9 +85,6 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
     "spring.configuration.checksum": "39c5621244fbb3c0e5b81b3f49bbc7dc",
     "vue.rearranger.settings.migration": "true"
   },

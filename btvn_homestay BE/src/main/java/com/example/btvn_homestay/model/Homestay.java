@@ -127,4 +127,5 @@ public class Homestay {
     public void setFile(MultipartFile file) {
         this.file = file;
     }
+
 }

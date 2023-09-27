@@ -18,13 +18,20 @@ public class HomestayService implements IHomestayService {
     public List<Homestay> findAll() {
         return(List<Homestay>) iHomestayRepository.findAll();
     }
+
+
     @Override
     public Optional<Homestay> findById(Long id) {
-        return iHomestayRepository.findById(id);
+      return   iHomestayRepository.findById(id);
+
+    }
+    @Override
+    public void save(Homestay homestay) {
+        iHomestayRepository.save(homestay);
     }
 
     @Override
-    public void save(Homestay homestay) {
+    public void update(Homestay homestay) {
         iHomestayRepository.save(homestay);
     }
 
