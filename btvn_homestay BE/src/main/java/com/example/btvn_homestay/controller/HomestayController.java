@@ -43,4 +43,9 @@ public class HomestayController {
     public ResponseEntity<Iterable<Homestay>> search(String name){
         return new ResponseEntity<>(homestayService.findAllByName(name), HttpStatus.OK);
     }
+    @GetMapping("/price")
+    public ResponseEntity<Iterable<Homestay>> getHomestaysByPriceRange(@RequestParam("minPrice") Double minPrice,
+                                                   @RequestParam("maxPrice") Double maxPrice) {
+        return new ResponseEntity<>(homestayService.findAllByPriceBetween(minPrice, maxPrice), HttpStatus.OK);
+    }
 }
