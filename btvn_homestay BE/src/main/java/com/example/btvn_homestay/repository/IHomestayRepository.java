@@ -6,7 +6,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
-public interface IHomestayRepository extends JpaRepository<Homestay, Long> {
-
-}
+    @Repository
+    public interface IHomestayRepository extends JpaRepository<Homestay, Long> {
+        List<Homestay> findAllByNameContaining(String name);
+        List<Homestay> findAllByPriceBetween(Double minPrice, Double maxPrice);
+    }

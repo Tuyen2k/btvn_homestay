@@ -16,7 +16,7 @@ public class HomestayService implements IHomestayService {
 
     @Override
     public List<Homestay> findAll() {
-        return(List<Homestay>) iHomestayRepository.findAll();
+        return iHomestayRepository.findAll();
     }
 
 
@@ -38,5 +38,14 @@ public class HomestayService implements IHomestayService {
     @Override
     public void delete(Long id) {
         iHomestayRepository.deleteById(id);
+    }
+    @Override
+    public List<Homestay> findAllByName(String name){
+        return iHomestayRepository.findAllByNameContaining(name);
+    }
+
+    @Override
+    public List<Homestay> findAllByPriceBetween(Double minPrice, Double maxPrice) {
+        return iHomestayRepository.findAllByPriceBetween(minPrice, maxPrice);
     }
 }

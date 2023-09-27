@@ -10,7 +10,6 @@ function getAll() {
         },
         error: function (err) {
             console.log(err)
-            // lỗi
         }
     });
 
@@ -20,9 +19,10 @@ getAll();
 
 function show(arr) {
     let str = "";
+    let count = 0;
     for (const h of arr) {
         str += ` <tr>
-              <td>${h.id_homestay}</td>
+              <td>${++count}</td>
               <td>${h.name}</td>
               <td>${h.price}</td>
               <td>${h.description}</td>
@@ -51,6 +51,24 @@ function search() {
         url: "http://localhost:8080/api/homestay/search?name=" + search,
         success: function (data) {
             show(data);
+        },
+        error: function (err) {
+            console.log(err)
+        }
+    });
+}
+
+function searchPrice(){
+    var minPrice = $("#minPrice").val();
+    var maxPrice = $("#maxPrice").val();
+    $.ajax({
+        type: "GET",
+        headers: {
+            'Accept': 'application/json',
+        },
+        url: "http://localhost:8080/api/homestay/price?minPrice=" + minPrice + "&maxPrice=" + maxPrice,
+        success: function (data) {
+            show(data)
         },
         error: function (err) {
             console.log(err)

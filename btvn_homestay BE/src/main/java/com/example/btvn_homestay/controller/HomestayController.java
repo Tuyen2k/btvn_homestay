@@ -31,8 +31,8 @@ public class HomestayController {
 
 
     @GetMapping
-    public List<Homestay> getAllHomestays() {
-        return homestayService.findAll();
+    public ResponseEntity<Iterable<Homestay>> getAllHomestays() {
+        return new ResponseEntity<>(homestayService.findAll(), HttpStatus.OK);
     }
 
 @PostMapping
@@ -53,17 +53,24 @@ public  ResponseEntity<Void>save(@RequestPart("homestay") Homestay homestay,
     return  new ResponseEntity<>(HttpStatus.OK);
 }
 
-    @PostMapping("/update")
-    public String update(@RequestBody Homestay homestay) {
+    @PostMapping("/update/{id}")
+    public ResponseEntity<?> update(@RequestBody Homestay homestay,@PathVariable Long id) {
+        homestay.setId_homestay(id);
         homestayService.save(homestay);
-        return "Da sua";
+        return new ResponseEntity<>(HttpStatus.OK);
     }
-
     @GetMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
         homestayService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-
-
+    @GetMapping("/search")
+    public ResponseEntity<Iterable<Homestay>> search(String name){
+        return new ResponseEntity<>(homestayService.findAllByName(name), HttpStatus.OK);
+    }
+    @GetMapping("/price")
+    public ResponseEntity<Iterable<Homestay>> getHomestaysByPriceRange(@RequestParam("minPrice") Double minPrice,
+                                                   @RequestParam("maxPrice") Double maxPrice) {
+        return new ResponseEntity<>(homestayService.findAllByPriceBetween(minPrice, maxPrice), HttpStatus.OK);
+    }
 }

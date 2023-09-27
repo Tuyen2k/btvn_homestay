@@ -24,10 +24,23 @@
             <input id="search" oninput="search()" placeholder="Tìm kiếm">
         </div>
     </div>
+    <div class="row">
+        <div class="col-10">
+            <label for="minPrice">Minimum Price:</label>
+            <input type="number" id="minPrice" min="0" max="99999999" value="0">
+
+            <label for="maxPrice">Maximum Price:</label>
+            <input type="number" id="maxPrice" min="0" max="99999999" value="500000">
+
+            <button onclick="searchPrice()" id="searchButton">Search</button>
+        </div>
+        <div class="col-2">
+        </div>
+    </div>
     <table class="table table-striped table-hover table-bordered">
         <thead>
         <tr>
-            <td>Id</td>
+            <td>Stt</td>
             <td>Name</td>
             <td>Price</td>
             <td>Description</td>
@@ -49,10 +62,5 @@
 </body>
 </html>
 <script>
-    $(document).ready(function () {
-        $('select').selectize({
-            sortField: 'text'
-        });
-    });
 </script>
 <script src="../js/home.js"></script>
