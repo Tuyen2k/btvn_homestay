@@ -108,8 +108,8 @@ function searchByName() {
 }
 
 function createForm() {
-    address = {}
-    localStorage.setItem("address", JSON.stringify(address));
+    localStorage.removeItem("homestay");
+    localStorage.removeItem("id_update");
     window.location.href = "save.html"
 }
 

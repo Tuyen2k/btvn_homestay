@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1eb0280c-7d24-4325-ade0-99eedf79bc75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/controller/ServiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/repository/IServiceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/service/IService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/service/iplm/ServiceIPLM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homstay FE/html/save.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btvn_homstay FE/js/save.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1eb0280c-7d24-4325-ade0-99eedf79bc75" name="Changes" comment="pull dev">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/html/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/js/address.js" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/js/address.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/html/save.html" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/html/save.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/btvn_homstay FE/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/js/save.js" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/js/save.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +78,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;thai&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;address__be&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/tuyen/Desktop/ajax&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -95,7 +89,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;39c5621244fbb3c0e5b81b3f49bbc7dc&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;b8999d18fadba2c0f7d09a336fc9f518&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -110,7 +104,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.791" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.781" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.791" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.791" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Gradle : com.example : btvn_homestay-1.0-SNAPSHOT.war">
@@ -213,6 +207,8 @@
       <workItem from="1695734002717" duration="5052000" />
       <workItem from="1695741203234" duration="493000" />
       <workItem from="1695741715474" duration="950000" />
+      <workItem from="1695870504870" duration="479000" />
+      <workItem from="1695875166245" duration="2661000" />
     </task>
     <task id="LOCAL-00001" summary="Tim kiem?">
       <option name="closed" value="true" />
@@ -222,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695782068209</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="pull dev">
+      <option name="closed" value="true" />
+      <created>1695823291321</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695823291321</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +245,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Tim kiem?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tim kiem?" />
+    <MESSAGE value="pull dev" />
+    <option name="LAST_COMMIT_MESSAGE" value="pull dev" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.example.btvn_homestay.model.Homestay" memberName="address" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

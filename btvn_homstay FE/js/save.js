@@ -68,13 +68,20 @@ function findWardS(){
 }
 
 function status() {
+    let statusDB
+    if (homestayUP !== null){
+        statusDB = homestayUP.status;
+    }
+    else {
+        statusDB = [];
+    }
     $.ajax({
         type: "GET",
         url: "http://localhost:8080/api/statuses",
         success: function (data) {
             let content = '<select style="width: 100%; height: 40px" class="form-select" id="status">';
             for (let i = 0; i < data.length; i++) {
-                if (data[i].id_status === homestayUP.status.id_status){
+                if (data[i].id_status === statusDB.id_status){
                     content += '<option value="'+data[i].id_status+'" selected>'+data[i].name+'</option>';
                     continue
                 }
@@ -90,7 +97,12 @@ function findAllService(){
         type:"GET",
         success:function (data){
             let content = "";
-            let serviceUd =  homestayUP.service;
+            let serviceUd;
+            if (homestayUP !== null){
+                serviceUd =  homestayUP.service;
+            }else {
+                serviceUd = [];
+            }
             let flag = false;
             for (let i = 0; i < data.length; i++) {
                 for (let j = 0; j < serviceUd.length; j++) {
@@ -148,7 +160,7 @@ function save(){
             max_number_stay : capacity,
             description : description,
             status : {
-                id_status : 1
+                id_status : status
             },
             address : {
                 city : {
@@ -165,8 +177,22 @@ function save(){
             service : setService(service)
         }
     }else {
-        if (address.city.id_city == city && address.district.id_district == district
-        && address.ward.id_ward == ward && address.address_detail == address_detail){
+        // if (homestayUP.address.city.id_city == city && homestayUP.address.district.id_district == district
+        // && homestayUP.address.ward.id_ward == ward && homestayUP.address.address_detail == address_detail){
+        //     homestay = {
+        //         id_homestay : id,
+        //         name : name,
+        //         price : price,
+        //         max_number_stay : capacity,
+        //         description : description,
+        //         status : {
+        //             id_status : status
+        //         },
+        //         address : address,
+        //         image : localStorage.getItem("image"),
+        //         service : setService(service)
+        //     }
+        // }else {
             homestay = {
                 id_homestay : id,
                 name : name,
@@ -174,21 +200,7 @@ function save(){
                 max_number_stay : capacity,
                 description : description,
                 status : {
-                    id_status : 1
-                },
-                address : address,
-                image : localStorage.getItem("image"),
-                service : setService(service)
-            }
-        }else {
-            homestay = {
-                id_homestay : id,
-                name : name,
-                price : price,
-                max_number_stay : capacity,
-                description : description,
-                status : {
-                    id_status : 1
+                    id_status : status
                 },
                 address : {
                     city : {
@@ -204,7 +216,7 @@ function save(){
                 },
                 image : localStorage.getItem("image"),
                 service : setService(service)
-            }
+            // }
 
         }
 
@@ -258,8 +270,9 @@ function displayHomestayUpdate(){
 }
 function getDB(){
     displayHomestayUpdate()
-    findCityS()
     status()
+    findCityS()
+    findAllService()
 }
 
 
