@@ -1,9 +1,4 @@
 function findCity(){
-    $(document).ready(function () {
-        $('select').selectize({
-            sortField: 'text'
-        });
-    });
     $.ajax({
         type: "GET",
         url: "http://localhost:8080/api/city",
@@ -19,13 +14,7 @@ function findCity(){
     })
 }
 function findDistrict(){
-
-    $(document).ready(function () {
-        $('select').selectize({
-            sortField: 'text'
-        });
-    });
-    let id_city = document.getElementById("city").value;
+    let id_city = document.getElementById("select_city").value;
     $.ajax({
         type: "GET",
         url: `http://localhost:8080/api/districts/${id_city}/city`,
@@ -41,13 +30,7 @@ function findDistrict(){
     })
 }
 function findWard(){
-
-    $(document).ready(function () {
-        $('select').selectize({
-            sortField: 'text'
-        });
-    });
-    let id_district = document.getElementById("district").value;
+    let id_district = document.getElementById("select_district").value;
     $.ajax({
         type: "GET",
         url: `http://localhost:8080/api/wards/${id_district}/district`,

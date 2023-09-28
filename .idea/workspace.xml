@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1eb0280c-7d24-4325-ade0-99eedf79bc75" name="Changes" comment="Controller Homstay">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="1eb0280c-7d24-4325-ade0-99eedf79bc75" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/controller/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/controller/AddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/controller/HomestayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/controller/HomestayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/repository/IAddressRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/repository/IAddressRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/repository/IStatusRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/repository/IStatusRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btvn_homestay BE/src/main/java/com/example/btvn_homestay/service/AddressService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/html/Createhomestay.html" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/html/Createhomestay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/html/address.html" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/html/address.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/js/CreateHomestay.js" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/js/CreateHomestay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btvn_homstay FE/js/address.js" beforeDir="false" afterPath="$PROJECT_DIR$/btvn_homstay FE/js/address.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,27 +64,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/tuyen/Desktop/ajax",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "39c5621244fbb3c0e5b81b3f49bbc7dc",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;hoan&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/Downloads/demo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;b8999d18fadba2c0f7d09a336fc9f518&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.btvn_homestay" />
@@ -192,6 +191,9 @@
       <workItem from="1695612797558" duration="11850000" />
       <workItem from="1695629522152" duration="3593000" />
       <workItem from="1695633140051" duration="2197000" />
+      <workItem from="1695782328937" duration="1364000" />
+      <workItem from="1695785077985" duration="1158000" />
+      <workItem from="1695790247006" duration="421000" />
     </task>
     <servers />
   </component>
